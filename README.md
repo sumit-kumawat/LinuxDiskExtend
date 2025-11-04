@@ -5,13 +5,11 @@
 
 > One-command solution to automatically extend Linux disk space with LVM
 
-## 🚀 Quick Install & Use
+## 🚀 One-Command Solution
 
 ```bash
-# Download and run
-sudo curl -L https://raw.githubusercontent.com/sumit-kumawat/LinuxDiskExtend/main/auto_extend_disk.sh -o /usr/local/bin/auto_extend_disk.sh
-sudo chmod +x /usr/local/bin/auto_extend_disk.sh
+# Run once and auto-delete (recommended for one-time use)
+sudo bash -c 'curl -L https://raw.githubusercontent.com/sumit-kumawat/LinuxDiskExtend/main/auto_extend_disk.sh -o /tmp/auto_extend_disk.sh && chmod +x /tmp/auto_extend_disk.sh && /tmp/auto_extend_disk.sh && rm -f /tmp/auto_extend_disk.sh'
 
-# Run it!
-sudo auto_extend_disk.sh
-
+# Or install permanently (if you need to run multiple times)
+sudo curl -L https://raw.githubusercontent.com/sumit-kumawat/LinuxDiskExtend/main/auto_extend_disk.sh -o /usr/local/bin/auto_extend_disk.sh && sudo chmod +x /usr/local/bin/auto_extend_disk.sh && sudo auto_extend_disk.sh
